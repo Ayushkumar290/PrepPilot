@@ -6,7 +6,8 @@ const cors = require("cors")
 app.use(express.json());
 app.use(cookieParser());
 app.use(cors({
-    origin:"http://localhost:5173",
+    origin:"https://preppilot-git-get-started-ayush33kumar3-2174s-projects.vercel.app",
+
     credentials:true
 }))
 
