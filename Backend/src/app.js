@@ -5,23 +5,11 @@ const cors = require("cors")
 
 app.use(express.json());
 app.use(cookieParser());
-const allowedOrigins = [
-    "http://localhost:5173",
-    "https://preppilot-git-get-started-ayush33kumar3-2174s-projects.vercel.app"
-];
-
 app.use(cors({
-    origin: function (origin, callback) {
-        if (!origin || allowedOrigins.includes(origin)) {
-            return callback(null, true);
-        }
-
-        return callback(new Error("Origin not allowed by CORS"));
-    },
-    credentials: true,
-    methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
-    allowedHeaders: ["Content-Type", "Authorization"]
-}));
+    origin:"https://preppilot.vercel.app/ ",
+            
+    credentials:true
+}))
 
 
 // Require all the routes here 
