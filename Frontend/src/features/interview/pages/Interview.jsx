@@ -3,6 +3,7 @@ import { Link, useParams } from "react-router";
 import { getAllInterviewReports, getInterviewReportById } from "../services/interview.api";
 import "../style/interview.scss";
 import BrandLogo from "../../../components/BrandLogo";
+import Logout from "../../auth/pages/Logout";
 
 
 
@@ -135,6 +136,7 @@ const Interview = () => {
             <header className="interview-topbar">
                 <BrandLogo />
                 <Link className="plan-link" to="/">Generate interview plan</Link>
+                <Logout />
             </header>
             <section className="interview-layout" aria-label="Interview report">
                 <nav className="interview-navigation" aria-label="Report sections">

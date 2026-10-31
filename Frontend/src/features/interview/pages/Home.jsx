@@ -3,7 +3,7 @@ import "../style/home.scss";
 import { useInterview } from "../hooks/useInterview";
 import { useNavigate } from "react-router";
 import BrandLogo from "../../../components/BrandLogo";
-
+import Logout from "../../auth/pages/Logout";
 
 
 
@@ -83,6 +83,7 @@ const Home = () => {
             <section className="plan-page">
                 <nav className="home-navigation" aria-label="Main navigation">
                     <BrandLogo />
+                    <Logout />
                 </nav>
 
                 <header className="page-heading">

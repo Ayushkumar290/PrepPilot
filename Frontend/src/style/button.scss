@@ -17,3 +17,33 @@
 
     }
 }
+
+.logout-button {
+    min-height: 36px;
+    padding: 0 14px;
+    border: 1px solid rgb(241 38 112 / 35%);
+    border-radius: 8px;
+    background: rgb(241 38 112 / 9%);
+    color: #ff6a9c;
+    font: inherit;
+    font-size: 12px;
+    font-weight: 650;
+    cursor: pointer;
+    transition: background 150ms ease, border-color 150ms ease, color 150ms ease;
+
+    &:hover:not(:disabled) {
+        border-color: #f12670;
+        background: rgb(241 38 112 / 18%);
+        color: #ff8ab2;
+    }
+
+    &:focus-visible {
+        outline: 2px solid #f36b9a;
+        outline-offset: 3px;
+    }
+
+    &:disabled {
+        cursor: wait;
+        opacity: 0.7;
+    }
+}
