@@ -6,7 +6,7 @@ const cors = require("cors")
 app.use(express.json());
 app.use(cookieParser());
 app.use(cors({
-    origin:"https://preppilot.vercel.app/ ",
+    origin: process.env.FRONTEND_URL,
             
     credentials:true
 }))
