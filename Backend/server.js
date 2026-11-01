@@ -1,14 +1,19 @@
 require('dotenv').config();
 const app = require('./src/app');
 const connectToDB = require('./src/config/database');
-
+const PORT = process.env.PORT || 3000;
 // Connect to the database
-connectToDB();
+const startServer = async () => {
+    try {
+        await connectToDB();
 
-// Local / Render / Railway: start a normal HTTP server.
-// On Vercel the app is imported as a serverless function, so we must NOT listen.
+        app.listen(PORT, "0.0.0.0", () => {
+            console.log(`Server running on ${PORT}`);
+        });
+    } catch (error) {
+        console.error("Database connection failed:", error);
+        process.exit(1);
+    }
+};
+startServer();
 
-app.listen(3000, () => {
-    console.log("Server is running on port 3000")
-})
-module.exports = app;
