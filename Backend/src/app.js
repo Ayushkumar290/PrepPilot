@@ -12,6 +12,8 @@ app.set('trust proxy', 1);
 app.use(express.json());
 app.use(cookieParser());
 
+connectToDB()
+
 // FRONTEND_URL can be one URL or a comma-separated list, e.g.
 // "http://localhost:5173,https://preppilot.vercel.app"
 const allowedOrigins = (process.env.FRONTEND_URL || 'http://localhost:5173')
