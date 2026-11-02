@@ -33,7 +33,7 @@ const Login = () =>{
             <div className="form-container">
                 <h1>Login</h1>
 
-                <form >
+                <form onSubmit={handleSubmit}>
                     <div className="input-group">
                         <label htmlFor="email">Email</label>
                         <input type="email" id="email" placeholder="Enter  email address" 
@@ -48,7 +48,7 @@ const Login = () =>{
                         />
                     </div>
 
-                    <button onClick={handleSubmit} className= "button primary-button" type="submit" >Login</button>
+                    <button className= "button primary-button" type="submit" >Login</button>
 
                 </form>
 
