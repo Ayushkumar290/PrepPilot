@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "../auth.form.scss"
-import {useNavigate,Link, useSearchParams} from "react-router"
+import {useNavigate,Link} from "react-router"
 import { useAuth } from "../hooks/useAuth";
 import BrandLogo from "../../../components/BrandLogo";
 
