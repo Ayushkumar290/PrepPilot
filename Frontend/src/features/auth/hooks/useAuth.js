@@ -29,7 +29,7 @@ export const useAuth = () => {
 
         setLoading(true)
         try {
-            const data = await Register({ username, email, password })
+            const data = await register({ username, email, password })
 
             
             setUser(data.user)
